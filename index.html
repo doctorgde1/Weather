@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css?family=Karla:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic&_v=20220730175849"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20220730175849">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <div class="first__screen screen">
+                <div class="first__screen-img-container">
+                    <picture><source srcset="img/first_screen/background.webp" type="image/webp"><img class="screen__background" src="img/first_screen/background.jpg" alt=""></picture>
+                    <picture><source srcset="img/first_screen/sun.webp" type="image/webp"><img class="screen__sun" src="img/first_screen/sun.png" alt=""></picture>
+                    <picture><source srcset="img/first_screen/sixth_plan_cloud.webp" type="image/webp"><img class="screen__fifth-plan-cloud" src="img/first_screen/sixth_plan_cloud.png" alt=""></picture>
+                    <picture><source srcset="img/first_screen/fifth_plan_cloud.webp" type="image/webp"><img class="screen__fourth-plan-cloud" src="img/first_screen/fifth_plan_cloud.png" alt=""></picture>
+                    <picture><source srcset="img/first_screen/third_plan_cloud.webp" type="image/webp"><img class="screen__third-plan-cloud" src="img/first_screen/third_plan_cloud.png" alt=""></picture>
+                    <picture><source srcset="img/first_screen/second_plan_cloud.webp" type="image/webp"><img class="screen__second-plan-cloud" src="img/first_screen/second_plan_cloud.png" alt=""></picture>
+                    <picture><source srcset="img/first_screen/first_plan_cloud.webp" type="image/webp"><img class="screen__first-plan-cloud" src="img/first_screen/first_plan_cloud.png" alt=""></picture>
+                </div>
+                <div class="screen-weather weather"></div>
+            </div>
+            <div class="second__screen screen">
+                <div class="second__screen-img-container">
+                    <div class="second__screen-weather-background">
+                        <picture><source srcset="img/second_screen/weather_condition/bright_clouds/background.webp" type="image/webp"><img class="screen__background" src="img/second_screen/weather_condition/bright_clouds/background.jpg" alt=""></picture>
+                    </div>
+                    <div class="second__screen-main">
+                        <picture><source srcset="img/second_screen/weather_condition/bright_clouds/sixth_plan_cloud.webp" type="image/webp"><img class="screen__fifth-plan-cloud" src="img/second_screen/weather_condition/bright_clouds/sixth_plan_cloud.png" alt=""></picture>
+                        <picture><source srcset="img/second_screen/weather_condition/bright_clouds/fifth_plan_cloud.webp" type="image/webp"><img class="screen__fourth-plan-cloud" src="img/second_screen/weather_condition/bright_clouds/fifth_plan_cloud.png" alt=""></picture>
+                        <picture><source srcset="img/second_screen/weather_condition/bright_clouds/third_plan_cloud.webp" type="image/webp"><img class="screen__third-plan-cloud" src="img/second_screen/weather_condition/bright_clouds/third_plan_cloud.png" alt=""></picture>
+                        <picture><source srcset="img/second_screen/weather_condition/bright_clouds/second_plan_cloud.webp" type="image/webp"><img class="screen__second-plan-cloud" src="img/second_screen/weather_condition/bright_clouds/second_plan_cloud.png" alt=""></picture>
+                        <picture><source srcset="img/second_screen/weather_condition/bright_clouds/first_plan_cloud.webp" type="image/webp"><img class="screen__first-plan-cloud" src="img/second_screen/weather_condition/bright_clouds/first_plan_cloud.png" alt=""></picture>
+                    </div>
+                    <div class="second__screen-weather-condition condition"></div>
+                    <div class="second__screen-weather-environment environment"></div>
+                </div>
+                <div class="screen-weather weather">
+                    <div class="weather__search search">
+                        <div class="search__container">
+                            <form class="search__form" name="search__form" target="_self" action="#" method="get">
+    <input class="search__bar" name="city-list" list="search__datalist" type="text" placeholder="Chose City">
+    <datalist id="search__datalist" style="display:none;">
+        <option value="kharkiv"></option>
+        <option value="kiev"></option>
+        <option value="london"></option>
+        <option value="tokyo"></option>
+        <option value="toronto"></option>
+        <option value="tongyu"></option>
+        <option value="tubuxin sumu"></option>
+    </datalist>
+    <div class="search__submit">
+        <input type="submit" value="submit">
+    </div>
+</form>
+                        </div>
+                    </div>
+                    <div class="weather__cards">
+                        <div class="cards__container">
+                            <div class="cards__group">
+                                <div class="card-item card">
+    <div class="card__head">
+        <div class="card__heading"></div> 
+        <div class="card__weather-main weather"></div>
+    </div>
+    <div class="card__bottom">
+        <div class="card__weather-additional weather">
+            <div class="weather__details details">
+            </div>
+            <div class="weather__precipitation precipitation">
+                <h3 class="precipitation__heading">
+                    Precipitation
+                </h3>
+                <div class="precipitation__inf">
+                </div>
+            </div>
+            <div class="weather__wind wind">
+                <h3 class="wind__heading">
+                    Wind
+                </h3>
+                <div class="wind__inf">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                <div class="card-item card">
+    <div class="card__head">
+        <div class="card__heading"></div> 
+        <div class="card__weather-main weather"></div>
+    </div>
+    <div class="card__bottom">
+        <div class="card__weather-additional weather">
+            <div class="weather__details details">
+            </div>
+            <div class="weather__precipitation precipitation">
+                <h3 class="precipitation__heading">
+                    Precipitation
+                </h3>
+                <div class="precipitation__inf">
+                </div>
+            </div>
+            <div class="weather__wind wind">
+                <h3 class="wind__heading">
+                    Wind
+                </h3>
+                <div class="wind__inf">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                <div class="card-item card">
+    <div class="card__head">
+        <div class="card__heading"></div> 
+        <div class="card__weather-main weather"></div>
+    </div>
+    <div class="card__bottom">
+        <div class="card__weather-additional weather">
+            <div class="weather__details details">
+            </div>
+            <div class="weather__precipitation precipitation">
+                <h3 class="precipitation__heading">
+                    Precipitation
+                </h3>
+                <div class="precipitation__inf">
+                </div>
+            </div>
+            <div class="weather__wind wind">
+                <h3 class="wind__heading">
+                    Wind
+                </h3>
+                <div class="wind__inf">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="cards__group">
+                                <div class="card-item card">
+    <div class="card__head">
+        <div class="card__heading"></div> 
+        <div class="card__weather-main weather"></div>
+    </div>
+    <div class="card__bottom">
+        <div class="card__weather-additional weather">
+            <div class="weather__details details">
+            </div>
+            <div class="weather__precipitation precipitation">
+                <h3 class="precipitation__heading">
+                    Precipitation
+                </h3>
+                <div class="precipitation__inf">
+                </div>
+            </div>
+            <div class="weather__wind wind">
+                <h3 class="wind__heading">
+                    Wind
+                </h3>
+                <div class="wind__inf">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                <div class="card-item card">
+    <div class="card__head">
+        <div class="card__heading"></div> 
+        <div class="card__weather-main weather"></div>
+    </div>
+    <div class="card__bottom">
+        <div class="card__weather-additional weather">
+            <div class="weather__details details">
+            </div>
+            <div class="weather__precipitation precipitation">
+                <h3 class="precipitation__heading">
+                    Precipitation
+                </h3>
+                <div class="precipitation__inf">
+                </div>
+            </div>
+            <div class="weather__wind wind">
+                <h3 class="wind__heading">
+                    Wind
+                </h3>
+                <div class="wind__inf">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                <div class="card-item card">
+    <div class="card__head">
+        <div class="card__heading"></div> 
+        <div class="card__weather-main weather"></div>
+    </div>
+    <div class="card__bottom">
+        <div class="card__weather-additional weather">
+            <div class="weather__details details">
+            </div>
+            <div class="weather__precipitation precipitation">
+                <h3 class="precipitation__heading">
+                    Precipitation
+                </h3>
+                <div class="precipitation__inf">
+                </div>
+            </div>
+            <div class="weather__wind wind">
+                <h3 class="wind__heading">
+                    Wind
+                </h3>
+                <div class="wind__inf">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="cards__group">
+                                <div class="card-item card">
+    <div class="card__head">
+        <div class="card__heading"></div> 
+        <div class="card__weather-main weather"></div>
+    </div>
+    <div class="card__bottom">
+        <div class="card__weather-additional weather">
+            <div class="weather__details details">
+            </div>
+            <div class="weather__precipitation precipitation">
+                <h3 class="precipitation__heading">
+                    Precipitation
+                </h3>
+                <div class="precipitation__inf">
+                </div>
+            </div>
+            <div class="weather__wind wind">
+                <h3 class="wind__heading">
+                    Wind
+                </h3>
+                <div class="wind__inf">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="cards__group">
+                                <div class="card-item card">
+    <div class="card__head">
+        <div class="card__heading"></div> 
+        <div class="card__weather-main weather"></div>
+    </div>
+    <div class="card__bottom">
+        <div class="card__weather-additional weather">
+            <div class="weather__details details">
+            </div>
+            <div class="weather__precipitation precipitation">
+                <h3 class="precipitation__heading">
+                    Precipitation
+                </h3>
+                <div class="precipitation__inf">
+                </div>
+            </div>
+            <div class="weather__wind wind">
+                <h3 class="wind__heading">
+                    Wind
+                </h3>
+                <div class="wind__inf">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                <div class="card-item card">
+    <div class="card__head">
+        <div class="card__heading"></div> 
+        <div class="card__weather-main weather"></div>
+    </div>
+    <div class="card__bottom">
+        <div class="card__weather-additional weather">
+            <div class="weather__details details">
+            </div>
+            <div class="weather__precipitation precipitation">
+                <h3 class="precipitation__heading">
+                    Precipitation
+                </h3>
+                <div class="precipitation__inf">
+                </div>
+            </div>
+            <div class="weather__wind wind">
+                <h3 class="wind__heading">
+                    Wind
+                </h3>
+                <div class="wind__inf">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                <div class="card-item card">
+    <div class="card__head">
+        <div class="card__heading"></div> 
+        <div class="card__weather-main weather"></div>
+    </div>
+    <div class="card__bottom">
+        <div class="card__weather-additional weather">
+            <div class="weather__details details">
+            </div>
+            <div class="weather__precipitation precipitation">
+                <h3 class="precipitation__heading">
+                    Precipitation
+                </h3>
+                <div class="precipitation__inf">
+                </div>
+            </div>
+            <div class="weather__wind wind">
+                <h3 class="wind__heading">
+                    Wind
+                </h3>
+                <div class="wind__inf">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                <div class="card-item card">
+    <div class="card__head">
+        <div class="card__heading"></div> 
+        <div class="card__weather-main weather"></div>
+    </div>
+    <div class="card__bottom">
+        <div class="card__weather-additional weather">
+            <div class="weather__details details">
+            </div>
+            <div class="weather__precipitation precipitation">
+                <h3 class="precipitation__heading">
+                    Precipitation
+                </h3>
+                <div class="precipitation__inf">
+                </div>
+            </div>
+            <div class="weather__wind wind">
+                <h3 class="wind__heading">
+                    Wind
+                </h3>
+                <div class="wind__inf">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js?_v=20220730175849"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js?_v=20220730175849"></script>
+    <script src="js/app.min.js?_v=20220730175849"></script>
+</body>
+</html>
