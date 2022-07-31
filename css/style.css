@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root {
   --text-color: hsl(229, 38%, 57%);
   --heading-color: hsl(229, 38%, 40%);
@@ -56,10 +58,6 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.weather__search {
-  margin: 0px 0px 36px 0px;
 }
 
 .search__container {
@@ -131,13 +129,18 @@ h6 {
 .cards__container {
   position: relative;
   max-width: 1180px;
-  height: 100%;
   margin: 0px auto;
   z-index: 200;
+  height: 100%;
 }
 
-.cards__container .slick-list {
-  padding-top: 10px;
+.cards__container > .slick-list {
+  height: 100%;
+  padding-top: 20px;
+}
+
+.cards__container .slick-track {
+  height: 100%;
 }
 
 .cards__container .cards__group {
@@ -145,9 +148,9 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -166,13 +169,13 @@ h6 {
   background: radial-gradient(177.01% 109.82% at 100% 100%, hsla(227deg, 63%, 72%, 0.5) 0%, rgba(194, 193, 243, 0.55) 51.46%, rgba(229, 236, 249, 0.19) 100%);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  height: 70vh;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 100%;
           flex: 0 1 100%;
+  height: calc(100% - 87px);
   border-radius: 20px;
   overflow: auto;
-  margin: 0px 48px 0px 0px;
+  margin: 0px 28px 0px 0px;
   color: var(--text-color);
   font-weight: 500;
   -ms-overflow-style: none;
@@ -188,9 +191,19 @@ h6 {
 }
 
 .card:hover {
-  -webkit-transform: scale(1.025);
-      -ms-transform: scale(1.025);
-          transform: scale(1.025);
+  -webkit-transform: scale(1.015);
+      -ms-transform: scale(1.015);
+          transform: scale(1.015);
+}
+
+.card::after {
+  content: "";
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: -o-radial-gradient(100% 100%, 177.01% 109.82%, hsla(227deg, 63%, 72%, 0.5) 0%, rgba(194, 193, 243, 0.55) 51.46%, rgba(229, 236, 249, 0.19) 100%);
+  background: radial-gradient(177.01% 109.82% at 100% 100%, hsla(227deg, 63%, 72%, 0.5) 0%, rgba(194, 193, 243, 0.55) 51.46%, rgba(229, 236, 249, 0.19) 100%);
 }
 
 .card__head {
@@ -206,23 +219,19 @@ h6 {
 }
 
 .card__heading {
+  position: relative;
   display: inline;
   width: 100%;
   margin-bottom: 20px;
   color: var(--heading-color);
-  font-size: calc(11px + 1.3194444444vw);
+  font-size: 30px;
 }
 
 .card__weather-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  max-width: 100%;
 }
 
 .weather__inf {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100px;
-          flex: 0 0 100px;
   margin-right: 30px;
   font-weight: 500;
   font-size: 1rem;
@@ -334,25 +343,6 @@ h6 {
   font-weight: 600;
 }
 
-.cards__container .active {
-  -webkit-transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  -o-transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  margin: 0;
-}
-
-.cards__container .unactive {
-  -webkit-transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  -o-transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  visibility: hidden;
-  opacity: 0;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 0px;
-          flex: 0 1 0;
-  margin: 0;
-}
-
 @-webkit-keyframes slide-app {
   0% {
     -webkit-transform: translateY(100%);
@@ -445,8 +435,6 @@ h6 {
 }
 
 .first__screen .screen__sun {
-  left: 90px;
-  bottom: -80px;
   z-index: 7;
 }
 
@@ -638,7 +626,7 @@ h6 {
           align-items: baseline;
   color: hsl(229deg, 38%, 57%);
   padding-left: calc(10px + 27.2 * (100vw - 320px) / 1440);
-  padding-right: calc(10px + 27.2 * (100vw - 320px) / 1440);
+  padding-right: calc(10px + 2.2222222222vw);
   padding-top: calc(20px + 34 * (100vw - 320px) / 1440);
   top: 0;
   right: 0;
@@ -671,8 +659,40 @@ h6 {
 }
 
 .second__screen .screen-weather {
-  padding-top: 70px;
   height: 100%;
+  padding-top: 5vh;
+}
+
+@media (min-width: 576px) {
+  .card__heading::after {
+    content: "···";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 5px;
+    font-size: 50px;
+  }
+
+  .cards__container .active {
+    -webkit-transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    -o-transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    margin: 0;
+  }
+
+  .cards__container .unactive {
+    -webkit-transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    -o-transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    transition: all 0.4s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 0px;
+            flex: 0 1 0;
+    margin: 0;
+  }
 }
 
 @media (max-width: 767px) {
